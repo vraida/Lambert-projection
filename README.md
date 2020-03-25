@@ -25,7 +25,6 @@ lamb = Lambert(...
 );
 
 [x, y] = lamb.geographic2cartesian(latitude, longitude);
-fprintf('Forward direction - largest absolute errors: x = %f, y = %f\n', max(abs(x_test-x_true)), max(abs(y_test-y_true)));
 
 [latitude, longitude] = lamb.cartesian2geographic(x, y);
 ```
