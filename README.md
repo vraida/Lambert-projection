@@ -1,11 +1,11 @@
 # Lambert-projection
 Lambert conformal conic projection - two standard parallel (2SP) case. Python and Matlab implementation. Implemented according to IOGP report, page 19: http://www.epsg.org/Portals/0/373-07-2.pdf?ver=2018-10-12-153840-577
-#### Methods
+### Methods
 **geographic2cartesian** &#8211; Converts geographic coordinates (latitude, longitude) to cartesian coordinates (x, y).
 **cartesian2geographic** &#8211; Converts cartesian coordinates (x, y) to geographic coordinates (latitude, longitude).
 
 ## Usage
-#### Python
+### Python
 ```python
 lamb = Lambert(
     (standard_parallel_1, standard_parallel_2),
@@ -18,7 +18,7 @@ x, y = lamb.geographic2cartesian(latitude, longitude)
 
 latitude, longitude = lamb.cartesian2geographic(x, y)
 ```
-#### Matlab
+### Matlab
 ```matlab
 lamb = Lambert(...
     [standard_parallel_1, standard_parallel_2],  ...
