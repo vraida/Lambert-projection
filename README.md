@@ -3,7 +3,7 @@ Lambert conformal conic projection - two standard parallel (2SP) case. Python an
 
 ## Usage
 ### Python
-'''python
+```python
 lamb = Lambert(
     (standard_parallel_1, standard_parallel_2),
     central_latitude, central_longitude,
@@ -14,9 +14,9 @@ lamb = Lambert(
 x, y = lamb.geographic2cartesian(latitude, longitude)
 
 latitude, longitude = lamb.cartesian2geographic(x, y)
-'''
+```
 ### Matlab
-'''matlab
+```matlab
 lamb = Lambert(...
     [standard_parallel_1, standard_parallel_2],  ...
     central_latitude, central_longitude,         ...
@@ -28,7 +28,7 @@ lamb = Lambert(...
 fprintf('Forward direction - largest absolute errors: x = %f, y = %f\n', max(abs(x_test-x_true)), max(abs(y_test-y_true)));
 
 [latitude, longitude] = lamb.cartesian2geographic(x, y);
-'''
+```
 
 ### Projection Constants
-Constants used in both examples '''python_implementation/lambert_test.py''' and '''matlab_implementation/lambert_test.m''' (defined in file '''projection_constants.json''') correspond to MGI / Austria Lambert 48, source: https://spatialreference.org/ref/sr-org/mgi-austria-lambert-48/html/
+Constants used in both examples ```python_implementation/lambert_test.py``` and ```matlab_implementation/lambert_test.m``` (defined in file ```projection_constants.json```) correspond to MGI / Austria Lambert 48, source: https://spatialreference.org/ref/sr-org/mgi-austria-lambert-48/html/
